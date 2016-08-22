@@ -50,8 +50,6 @@ Route::post('/task', function (Request $request) {
  * show task dashboard
  */
 Route::delete('/task/{task}', function (Task $task) {
-    // dd($task);
-    echo $task->name;
-    // $task->delete();
-    // return redirect('/');
+    $task->delete();
+    return redirect('/');
 });
